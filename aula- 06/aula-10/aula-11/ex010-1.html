@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>NAÇÃO</title>
+    <style>
+      h1 {
+        font-family: Verdana, 18px;
+        color: blue;
+      }
+      body {
+        text-align: center;
+        font: normal 18px arial;
+        margin-top: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Nacionalidade!</h1>
+    Digite seu país: <input type="text" name="txtpa" id="txtpa" />
+    <input type="button" value="consultar" onclick="verificar()" />
+    <div id="res"></div>
+
+    <script>
+      function verificar() {
+        var txtp = window.document.querySelector("input#txtp");
+        var res = window.document.querySelector("div#res");
+        var pa = (txtpa.value);
+        res.innerHTML = `Sua nacionalidade é o ${pa}`;
+        if (pa == "brasil") {
+          res.innerHTML = `<p> você é brasileiro !`
+        } else {
+          res.innerHTML = `você é estrangeiro!`;
+        }
+      }
+    </script>
+  </body>
+</html>
